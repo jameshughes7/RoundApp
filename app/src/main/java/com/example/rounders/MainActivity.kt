@@ -13,8 +13,8 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "onCreate Called")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        button.text = "Rounders App started!"
-        button.setOnClickListener { toast("Message: ${input.text}") }
+        val getRawData = GetRawData()
+        getRawData.execute("https://api-sandbox.starlingbank.com/api/v1/transactions -H \"Accept:application/json\" -H \"Authorization: Bearer p1rX8FK2xqVvouYMAGh6qGd8K4W4utW4WDqV6njd5e8xNJKaTVzbL6wwk64MfVlV\"")
         Log.d(TAG, "onCreate Ends")
     }
 
